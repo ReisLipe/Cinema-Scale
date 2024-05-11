@@ -14,6 +14,9 @@
 		BFD325642BEF2060005A5645 /* AspectButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325632BEF205F005A5645 /* AspectButtonViewModel.swift */; };
 		BFD325662BEF20A6005A5645 /* RateButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325652BEF20A6005A5645 /* RateButtonViewModel.swift */; };
 		BFD325682BEF20E4005A5645 /* Aspects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325672BEF20E4005A5645 /* Aspects.swift */; };
+		BFD3256A2BEFC9E4005A5645 /* ScoreSystems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */; };
+		BFD3256C2BEFCF4A005A5645 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3256B2BEFCF4A005A5645 /* CalculateViewModel.swift */; };
+		BFD325702BEFE8FB005A5645 /* ResultPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3256F2BEFE8FB005A5645 /* ResultPopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		BFD325632BEF205F005A5645 /* AspectButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectButtonViewModel.swift; sourceTree = "<group>"; };
 		BFD325652BEF20A6005A5645 /* RateButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButtonViewModel.swift; sourceTree = "<group>"; };
 		BFD325672BEF20E4005A5645 /* Aspects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aspects.swift; sourceTree = "<group>"; };
+		BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSystems.swift; sourceTree = "<group>"; };
+		BFD3256B2BEFCF4A005A5645 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		BFD3256F2BEFE8FB005A5645 /* ResultPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,9 @@
 				BFD325622BEF2037005A5645 /* ModelView */,
 				BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */,
 				BFD325552BEF2016005A5645 /* ContentView.swift */,
+				BFD3256F2BEFE8FB005A5645 /* ResultPopUpView.swift */,
 				BFD325672BEF20E4005A5645 /* Aspects.swift */,
+				BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */,
 				BFD325572BEF2019005A5645 /* Assets.xcassets */,
 				BFD325592BEF2019005A5645 /* Preview Content */,
 			);
@@ -80,6 +88,7 @@
 			children = (
 				BFD325632BEF205F005A5645 /* AspectButtonViewModel.swift */,
 				BFD325652BEF20A6005A5645 /* RateButtonViewModel.swift */,
+				BFD3256B2BEFCF4A005A5645 /* CalculateViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -155,9 +164,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD325682BEF20E4005A5645 /* Aspects.swift in Sources */,
+				BFD3256A2BEFC9E4005A5645 /* ScoreSystems.swift in Sources */,
+				BFD3256C2BEFCF4A005A5645 /* CalculateViewModel.swift in Sources */,
 				BFD325662BEF20A6005A5645 /* RateButtonViewModel.swift in Sources */,
 				BFD325642BEF2060005A5645 /* AspectButtonViewModel.swift in Sources */,
 				BFD325562BEF2016005A5645 /* ContentView.swift in Sources */,
+				BFD325702BEFE8FB005A5645 /* ResultPopUpView.swift in Sources */,
 				BFD325542BEF2016005A5645 /* CinemaScaleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
