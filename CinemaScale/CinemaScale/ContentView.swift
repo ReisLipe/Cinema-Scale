@@ -34,9 +34,19 @@ struct ContentView: View {
                     VStack{
                         ForEach(Array(aspectsList.enumerated()), id: \.offset) { aspect in
                             HStack {
-                                AspectButtonViewModel(aspectName: aspect.element.aspectName)
-                                RateButtonViewModel(rating: aspect.element.aspectRate)
-                                // Rate popup changes aspect.aspectRate value
+                                // Aspect Button
+                                Button(action: {
+                                    print("\(aspect.element.aspectName) clicked")
+                                }, label: {
+                                    AspectButtonViewModel(aspectName: aspect.element.aspectName)
+                                })
+                                
+                                // Rate Button
+                                Button(action: {
+                                    print("\(aspect.element.aspectName) rate clicked")
+                                }, label: {
+                                    RateButtonViewModel(rating: aspect.element.aspectRate)
+                                })
                             }
                         }
                     }
