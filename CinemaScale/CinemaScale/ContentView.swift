@@ -27,17 +27,19 @@ struct ContentView: View {
                         .scaledToFit()
                         .frame(width: 35, height: 35)
                         .foregroundColor(.red)
-                }.ignoresSafeArea(.all)
+                }
                 
                 // Aspect Buttons List
-                VStack{
-                    // Need to find a way to implement this:
-                    
-                    // ForEach(aspectsList, id: \.self) { aspect in
-                    //     HStack {
-                    //         AspectButtonViewModel(aspectName: aspect.aspectName)
-                    //         RateButtonViewModel(rating: aspect.aspectRate)
-                    //     }
+                ScrollView{
+                    VStack{
+                        ForEach(Array(aspectsList.enumerated()), id: \.offset) { aspect in
+                            HStack {
+                                AspectButtonViewModel(aspectName: aspect.element.aspectName)
+                                RateButtonViewModel(rating: aspect.element.aspectRate)
+                                // Rate popup changes aspect.aspectRate value
+                            }
+                        }
+                    }
                 }
             }
         }
