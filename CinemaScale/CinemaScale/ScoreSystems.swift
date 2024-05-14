@@ -12,22 +12,16 @@ enum ScoreSystems: String, CaseIterable{
     case ten = "10/10"
     case hundred = "100/100"
     
-    func scoreCalculator(rates: [Int]) -> Float{
+    func scoreSystemMultiplier() -> Float{
         var result: Float = 0
-        var average: Float = 0
-        
-        for rate in rates {
-            average += Float(rate)
-        }
-        average = average / 10
         
         switch self {
         case .five:
-            result = average
+            result = 1.0
         case .ten:
-            result = average * 2
+            result = 2.0
         case .hundred:
-            result = average * 20
+            result = 20.0
         }
         
         return result

@@ -8,54 +8,62 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedScoreSystem: ScoreSystems = .five
     @State var result: Float = 0
     @State var resultCalculated: Bool = false
+    @State var allRated: Bool = false
+    @State var selectedScoreSystem: ScoreSystems = .five
+    @State var reset: Bool = false
+    @State var closeResult: Bool = false
+    @State var aspectsList: [Aspects] = [
+        Aspects(aspectName: "Plot"),
+        Aspects(aspectName: "Attraction"),
+        Aspects(aspectName: "Theme"),
+        Aspects(aspectName: "Acting"),
+        Aspects(aspectName: "Dialogue"),
+        Aspects(aspectName: "Cinematography"),
+        Aspects(aspectName: "Editing"),
+        Aspects(aspectName: "Soundtrack"),
+        Aspects(aspectName: "Directing"),
+        Aspects(aspectName: "It Factor")
+    ]
+    
     
     var body: some View {
         ZStack{
-            
             // Background Color
-            Color(red: 32/255, green: 40/255, blue: 48/255)
+            Color(.backGround)
                 .ignoresSafeArea(.all)
-            
             // App
             VStack{
-                
                 // Header
                 HStack{
                     Text("Cinema Scale")
                         .font(.system(size: 35, weight: .bold, design: .rounded))
                         .foregroundStyle(.white)
                     
-                    //todo:  need to improve the logo
+                    // todo:  need to improve the logo
                     Image(systemName: "popcorn.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 35, height: 35)
                         .foregroundColor(.red)
                 }
-                
                 // Body
                 ScrollView{
-                    
                     // Aspect Buttons List
                     VStack{
-                        ForEach(Array(aspectsList.enumerated()), id: \.offset) { aspect in
+                        ForEach(0..<aspectsList.count, id:\.self) { aspect in
                             HStack {
                                 
                                 // Aspect Button
-                                Button(action: {
-                                    print("\(aspect.element.aspectName) clicked")
-                                }, label: {
-                                    AspectButtonViewModel(aspectName: aspect.element.aspectName)
+                                // todo: fazer o popup do aspect aparecer quando clicado
+                                Button(action: {}, label: {
+                                    AspectButtonViewModel(aspectName: aspectsList[aspect].aspectName)
                                 }).padding(.leading)
                                 
                                 // Rate Button
-                                Button(action: {
-                                    print("\(aspect.element.aspectName) rate clicked")
-                                }, label: {
-                                    RateButtonViewModel(rating: aspect.element.aspectRate)
+                                Button(action: {}, label: {
+                                    RateButtonViewModelDebug(rating: $aspectsList[aspect].aspectRate)
                                 }).padding(.trailing)
                             }
                         }
@@ -71,18 +79,21 @@ struct ContentView: View {
                         ForEach(ScoreSystems.allCases, id: \.self) { scoreSystem in
                             Text(scoreSystem.rawValue)
                                 .tag(scoreSystem)
-                            //todo: need to change text color
+                            // todo: need to change text color
                         }
                     }
                     .pickerStyle(.segmented)
-                    .background(Color(red: 255/255, green: 229/255, blue: 236/255))
-                    .colorMultiply(Color(red: 255/255, green: 128/255, blue: 0/255))
+                    .background(.letterboxdGreen)
+                    .colorMultiply(.letterboxdOrange)
                     .cornerRadius(8)
                     .padding()
                     
                     // Calculate Button:
                     Button(action: {
-                        // todo: Calculates the average
+                        for aspect in aspectsList {
+                            result += Float(aspect.aspectRate)
+                        }
+                        result = (result * selectedScoreSystem.scoreSystemMultiplier()) / 100 //10
                         resultCalculated = true
                     }, label: {
                         CalculateViewModel()
@@ -90,8 +101,8 @@ struct ContentView: View {
                 }
             }
         }.overlay(alignment: .bottom){
-            if resultCalculated {
-                ResultPopUpView(result: 0)
+            if resultCalculated && !reset && !closeResult {
+                ResultPopUpView(aspectsList: $aspectsList, close: $closeResult, result: result)
             }
         }.ignoresSafeArea(edges: .bottom)
     }

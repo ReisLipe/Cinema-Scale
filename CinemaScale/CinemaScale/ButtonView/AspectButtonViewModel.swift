@@ -1,5 +1,5 @@
 //
-//  CalculateViewModel.swift
+//  AspectButtonViewModel.swift
 //  CinemaScale
 //
 //  Created by Joao Filipe Reis Justo da Silva on 11/05/24.
@@ -7,20 +7,22 @@
 
 import SwiftUI
 
-struct CalculateViewModel: View {
+struct AspectButtonViewModel: View {
+    let aspectName: String
+    
     var body: some View {
         ZStack{
             Rectangle()
-                .foregroundStyle(Color(red: 5 / 255, green: 172 / 255, blue: 29 / 255))
-                .frame(width: 264, height: 64)
+                .foregroundStyle(Color.aspect)
+                .frame(width: 255, height: 64)
                 .cornerRadius(15)
-            Text("Calculate!")
+            Text(aspectName)
                 .font(.system(size: 21.6, weight: .bold, design: .rounded))
                 .foregroundStyle(.white)
-        }.padding()
+        }
     }
 }
 
 #Preview {
-    CalculateViewModel()
+    AspectButtonViewModel(aspectName: "Aspect")
 }
