@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CalculateViewModel: View {
+struct CalculateButtonView: View {
     var body: some View {
         ZStack{
             Rectangle()
@@ -22,5 +22,5 @@ struct CalculateViewModel: View {
 }
 
 #Preview {
-    CalculateViewModel()
+    CalculateButtonView()
 }

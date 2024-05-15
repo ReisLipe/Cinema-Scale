@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AspectButtonViewModel: View {
+struct AspectButtonView: View {
     let aspectName: String
     
     var body: some View {
@@ -24,5 +24,5 @@ struct AspectButtonViewModel: View {
 }
 
 #Preview {
-    AspectButtonViewModel(aspectName: "Aspect")
+    AspectButtonView(aspectName: "Aspect")
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RateButtonViewModelDebug: View {
+struct RateButtonViewDebug: View {
     @Binding var rating: Int
     
     var body: some View {

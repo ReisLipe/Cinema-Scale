@@ -9,7 +9,7 @@
 import SwiftUI
 
 
-struct RateButtonView: View {
+struct ResultButtonView: View {
     let title: String
     let color: Color
     
@@ -27,5 +27,5 @@ struct RateButtonView: View {
 }
 
 #Preview {
-    RateButtonView(title: "Action", color: Color.letterboxdGreen)
+    ResultButtonView(title: "Action", color: Color.letterboxdGreen)
 }

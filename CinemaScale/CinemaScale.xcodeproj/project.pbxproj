@@ -7,34 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF0DD6972BF3F269003BC4A6 /* RateButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DD6962BF3F269003BC4A6 /* RateButtonsView.swift */; };
-		BF74DE682BF3C80500522904 /* RateButtonViewModelDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74DE672BF3C80500522904 /* RateButtonViewModelDebug.swift */; };
+		BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */; };
+		BF74DE682BF3C80500522904 /* RateButtonViewDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74DE672BF3C80500522904 /* RateButtonViewDebug.swift */; };
+		BF9B04682BF50335002EA346 /* Todos.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9B04672BF50335002EA346 /* Todos.txt */; };
 		BFD325542BEF2016005A5645 /* CinemaScaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */; };
 		BFD325562BEF2016005A5645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325552BEF2016005A5645 /* ContentView.swift */; };
 		BFD325582BEF2019005A5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD325572BEF2019005A5645 /* Assets.xcassets */; };
 		BFD3255B2BEF2019005A5645 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD3255A2BEF2019005A5645 /* Preview Assets.xcassets */; };
-		BFD325642BEF2060005A5645 /* AspectButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325632BEF205F005A5645 /* AspectButtonViewModel.swift */; };
-		BFD325662BEF20A6005A5645 /* RateButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325652BEF20A6005A5645 /* RateButtonViewModel.swift */; };
+		BFD325642BEF2060005A5645 /* AspectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325632BEF205F005A5645 /* AspectButtonView.swift */; };
+		BFD325662BEF20A6005A5645 /* RateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325652BEF20A6005A5645 /* RateButtonView.swift */; };
 		BFD325682BEF20E4005A5645 /* Aspects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325672BEF20E4005A5645 /* Aspects.swift */; };
 		BFD3256A2BEFC9E4005A5645 /* ScoreSystems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */; };
-		BFD3256C2BEFCF4A005A5645 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3256B2BEFCF4A005A5645 /* CalculateViewModel.swift */; };
+		BFD3256C2BEFCF4A005A5645 /* CalculateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3256B2BEFCF4A005A5645 /* CalculateButtonView.swift */; };
 		BFD325702BEFE8FB005A5645 /* ResultPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3256F2BEFE8FB005A5645 /* ResultPopUpView.swift */; };
 		BFD325732BF05CBD005A5645 /* RatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325722BF05CBD005A5645 /* RatePopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF0DD6962BF3F269003BC4A6 /* RateButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButtonsView.swift; sourceTree = "<group>"; };
-		BF74DE672BF3C80500522904 /* RateButtonViewModelDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButtonViewModelDebug.swift; sourceTree = "<group>"; };
+		BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultButtonsView.swift; sourceTree = "<group>"; };
+		BF74DE672BF3C80500522904 /* RateButtonViewDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButtonViewDebug.swift; sourceTree = "<group>"; };
+		BF9B04672BF50335002EA346 /* Todos.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Todos.txt; sourceTree = "<group>"; };
 		BFD325502BEF2016005A5645 /* CinemaScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaScaleApp.swift; sourceTree = "<group>"; };
 		BFD325552BEF2016005A5645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BFD325572BEF2019005A5645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD3255A2BEF2019005A5645 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BFD325632BEF205F005A5645 /* AspectButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectButtonViewModel.swift; sourceTree = "<group>"; };
-		BFD325652BEF20A6005A5645 /* RateButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButtonViewModel.swift; sourceTree = "<group>"; };
+		BFD325632BEF205F005A5645 /* AspectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectButtonView.swift; sourceTree = "<group>"; };
+		BFD325652BEF20A6005A5645 /* RateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButtonView.swift; sourceTree = "<group>"; };
 		BFD325672BEF20E4005A5645 /* Aspects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aspects.swift; sourceTree = "<group>"; };
 		BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSystems.swift; sourceTree = "<group>"; };
-		BFD3256B2BEFCF4A005A5645 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		BFD3256B2BEFCF4A005A5645 /* CalculateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButtonView.swift; sourceTree = "<group>"; };
 		BFD3256F2BEFE8FB005A5645 /* ResultPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUpView.swift; sourceTree = "<group>"; };
 		BFD325722BF05CBD005A5645 /* RatePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePopUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +52,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0DD69A2BF50048003BC4A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFD325552BEF2016005A5645 /* ContentView.swift */,
+				BFD325712BF05C9E005A5645 /* Pop Ups */,
+				BFD325622BEF2037005A5645 /* ButtonView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF0DD69B2BF50074003BC4A6 /* Auxiliaries */ = {
+			isa = PBXGroup;
+			children = (
+				BFD325672BEF20E4005A5645 /* Aspects.swift */,
+				BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */,
+			);
+			path = Auxiliaries;
+			sourceTree = "<group>";
+		};
 		BFD325472BEF2016005A5645 = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +90,12 @@
 		BFD325522BEF2016005A5645 /* CinemaScale */ = {
 			isa = PBXGroup;
 			children = (
-				BFD325712BF05C9E005A5645 /* Pop Ups */,
-				BFD325622BEF2037005A5645 /* ButtonView */,
 				BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */,
-				BFD325552BEF2016005A5645 /* ContentView.swift */,
-				BFD325672BEF20E4005A5645 /* Aspects.swift */,
-				BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */,
+				BF0DD69B2BF50074003BC4A6 /* Auxiliaries */,
+				BF0DD69A2BF50048003BC4A6 /* Views */,
 				BFD325572BEF2019005A5645 /* Assets.xcassets */,
 				BFD325592BEF2019005A5645 /* Preview Content */,
+				BF9B04672BF50335002EA346 /* Todos.txt */,
 			);
 			path = CinemaScale;
 			sourceTree = "<group>";
@@ -92,11 +111,11 @@
 		BFD325622BEF2037005A5645 /* ButtonView */ = {
 			isa = PBXGroup;
 			children = (
-				BFD325632BEF205F005A5645 /* AspectButtonViewModel.swift */,
-				BFD325652BEF20A6005A5645 /* RateButtonViewModel.swift */,
-				BF74DE672BF3C80500522904 /* RateButtonViewModelDebug.swift */,
-				BFD3256B2BEFCF4A005A5645 /* CalculateViewModel.swift */,
-				BF0DD6962BF3F269003BC4A6 /* RateButtonsView.swift */,
+				BFD325632BEF205F005A5645 /* AspectButtonView.swift */,
+				BFD325652BEF20A6005A5645 /* RateButtonView.swift */,
+				BF74DE672BF3C80500522904 /* RateButtonViewDebug.swift */,
+				BFD3256B2BEFCF4A005A5645 /* CalculateButtonView.swift */,
+				BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */,
 			);
 			path = ButtonView;
 			sourceTree = "<group>";
@@ -168,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9B04682BF50335002EA346 /* Todos.txt in Resources */,
 				BFD3255B2BEF2019005A5645 /* Preview Assets.xcassets in Resources */,
 				BFD325582BEF2019005A5645 /* Assets.xcassets in Resources */,
 			);
@@ -182,12 +202,12 @@
 			files = (
 				BFD325682BEF20E4005A5645 /* Aspects.swift in Sources */,
 				BFD3256A2BEFC9E4005A5645 /* ScoreSystems.swift in Sources */,
-				BF74DE682BF3C80500522904 /* RateButtonViewModelDebug.swift in Sources */,
-				BF0DD6972BF3F269003BC4A6 /* RateButtonsView.swift in Sources */,
+				BF74DE682BF3C80500522904 /* RateButtonViewDebug.swift in Sources */,
+				BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */,
 				BFD325732BF05CBD005A5645 /* RatePopUp.swift in Sources */,
-				BFD3256C2BEFCF4A005A5645 /* CalculateViewModel.swift in Sources */,
-				BFD325662BEF20A6005A5645 /* RateButtonViewModel.swift in Sources */,
-				BFD325642BEF2060005A5645 /* AspectButtonViewModel.swift in Sources */,
+				BFD3256C2BEFCF4A005A5645 /* CalculateButtonView.swift in Sources */,
+				BFD325662BEF20A6005A5645 /* RateButtonView.swift in Sources */,
+				BFD325642BEF2060005A5645 /* AspectButtonView.swift in Sources */,
 				BFD325562BEF2016005A5645 /* ContentView.swift in Sources */,
 				BFD325702BEFE8FB005A5645 /* ResultPopUpView.swift in Sources */,
 				BFD325542BEF2016005A5645 /* CinemaScaleApp.swift in Sources */,

@@ -31,12 +31,12 @@ struct ResultPopUpView: View {
                             Aspects(aspectName: aspect.aspectName)
                         }
                     }, label: {
-                        RateButtonView(
+                        ResultButtonView(
                         title: "Reset",
                         color: Color.letterboxdOrange)
                     })
                     Button(action: {close = true}, label: {
-                        RateButtonView(
+                        ResultButtonView(
                             title: "Close",
                             color: Color.letterboxdGreen)
                     })

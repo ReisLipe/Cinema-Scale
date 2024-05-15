@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RateButtonViewModel: View {
+struct RateButtonView: View {
     let rating: Int
     
     var body: some View {
@@ -39,5 +39,5 @@ struct RateButtonViewModel: View {
 }
 
 #Preview {
-    RateButtonViewModel(rating: 2)
+    RateButtonView(rating: 2)
 }

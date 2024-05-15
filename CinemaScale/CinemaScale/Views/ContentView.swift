@@ -30,26 +30,31 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
+            
             // Background Color
             Color(.backGround)
                 .ignoresSafeArea(.all)
+            
+            
             // App
             VStack{
+                
                 // Header
                 HStack{
                     Text("Cinema Scale")
                         .font(.system(size: 35, weight: .bold, design: .rounded))
                         .foregroundStyle(.white)
                     
-                    // todo:  need to improve the logo
                     Image(systemName: "popcorn.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 35, height: 35)
                         .foregroundColor(.red)
                 }
+                
                 // Body
                 ScrollView{
+                    
                     // Aspect Buttons List
                     VStack{
                         ForEach(0..<aspectsList.count, id:\.self) { aspect in
@@ -58,12 +63,12 @@ struct ContentView: View {
                                 // Aspect Button
                                 // todo: fazer o popup do aspect aparecer quando clicado
                                 Button(action: {}, label: {
-                                    AspectButtonViewModel(aspectName: aspectsList[aspect].aspectName)
+                                    AspectButtonView(aspectName: aspectsList[aspect].aspectName)
                                 }).padding(.leading)
                                 
                                 // Rate Button
                                 Button(action: {}, label: {
-                                    RateButtonViewModelDebug(rating: $aspectsList[aspect].aspectRate)
+                                    RateButtonViewDebug(rating: $aspectsList[aspect].aspectRate)
                                 }).padding(.trailing)
                             }
                         }
@@ -74,7 +79,7 @@ struct ContentView: View {
                         .font(.system(size: 21.6, weight: .bold, design: .default))
                         .foregroundStyle(.white)
                         .padding()
-                    
+    
                     Picker("Score System Selection", selection: $selectedScoreSystem) {
                         ForEach(ScoreSystems.allCases, id: \.self) { scoreSystem in
                             Text(scoreSystem.rawValue)
@@ -96,7 +101,7 @@ struct ContentView: View {
                         result = (result * selectedScoreSystem.scoreSystemMultiplier()) / 100 //10
                         resultCalculated = true
                     }, label: {
-                        CalculateViewModel()
+                        CalculateButtonView()
                     })
                 }
             }
