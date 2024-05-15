@@ -3,6 +3,7 @@
 1. Create a style sheet
 2. Implement the pop ups
 3. Create the text for the pop ups
-4. Make a better header icon
-5. Make a better app icon
-6. Make a 5 star button
+4. Improve the header spacing
+5. Make a better header icon
+6. Make a better app icon
+7. Make a 5 star button

@@ -20,7 +20,7 @@ struct ResultButtonView: View {
                 .frame(width: 179, height: 64)
                 .cornerRadius(15)
             Text(title)
-                .font(.system(size: 21.6, weight: .bold, design: .rounded))
+                .font(.header5)
                 .foregroundStyle(.white)
         }
     }

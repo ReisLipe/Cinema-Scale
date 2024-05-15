@@ -16,10 +16,10 @@ struct ResultPopUpView: View {
         let formatedResult: String = String(format: "%.1f", result)
         
         ZStack {
-            Color(red: 32/255, green: 40/255, blue: 48/255)
+            Color(.backGround)
             VStack{
                 Text("Total Score: \(formatedResult)")
-                    .font(.system(size: 35, weight: .bold, design: .rounded))
+                    .font(.header3)
                     .foregroundStyle(.white)
                     .padding()
                 // todo: need to move this text to the top of rectangle

@@ -17,7 +17,7 @@ struct AspectButtonView: View {
                 .frame(width: 255, height: 64)
                 .cornerRadius(15)
             Text(aspectName)
-                .font(.system(size: 21.6, weight: .bold, design: .rounded))
+                .font(.header5)
                 .foregroundStyle(.white)
         }
     }

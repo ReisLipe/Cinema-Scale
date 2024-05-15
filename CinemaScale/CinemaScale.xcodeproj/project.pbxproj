@@ -10,6 +10,7 @@
 		BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */; };
 		BF74DE682BF3C80500522904 /* RateButtonViewDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74DE672BF3C80500522904 /* RateButtonViewDebug.swift */; };
 		BF9B04682BF50335002EA346 /* Todos.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9B04672BF50335002EA346 /* Todos.txt */; };
+		BF9B046A2BF509F7002EA346 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B04692BF509F7002EA346 /* StyleGuide.swift */; };
 		BFD325542BEF2016005A5645 /* CinemaScaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */; };
 		BFD325562BEF2016005A5645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325552BEF2016005A5645 /* ContentView.swift */; };
 		BFD325582BEF2019005A5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD325572BEF2019005A5645 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultButtonsView.swift; sourceTree = "<group>"; };
 		BF74DE672BF3C80500522904 /* RateButtonViewDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButtonViewDebug.swift; sourceTree = "<group>"; };
 		BF9B04672BF50335002EA346 /* Todos.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Todos.txt; sourceTree = "<group>"; };
+		BF9B04692BF509F7002EA346 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		BFD325502BEF2016005A5645 /* CinemaScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaScaleApp.swift; sourceTree = "<group>"; };
 		BFD325552BEF2016005A5645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				BFD325572BEF2019005A5645 /* Assets.xcassets */,
 				BFD325592BEF2019005A5645 /* Preview Content */,
 				BF9B04672BF50335002EA346 /* Todos.txt */,
+				BF9B04692BF509F7002EA346 /* StyleGuide.swift */,
 			);
 			path = CinemaScale;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				BFD325682BEF20E4005A5645 /* Aspects.swift in Sources */,
 				BFD3256A2BEFC9E4005A5645 /* ScoreSystems.swift in Sources */,
+				BF9B046A2BF509F7002EA346 /* StyleGuide.swift in Sources */,
 				BF74DE682BF3C80500522904 /* RateButtonViewDebug.swift in Sources */,
 				BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */,
 				BFD325732BF05CBD005A5645 /* RatePopUp.swift in Sources */,

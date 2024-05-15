@@ -42,13 +42,13 @@ struct ContentView: View {
                 // Header
                 HStack{
                     Text("Cinema Scale")
-                        .font(.system(size: 35, weight: .bold, design: .rounded))
+                        .font(.header1)
                         .foregroundStyle(.white)
                     
                     Image(systemName: "popcorn.fill")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 35, height: 35)
+                        .frame(width: 36, height: 36)
                         .foregroundColor(.red)
                 }
                 
@@ -61,7 +61,6 @@ struct ContentView: View {
                             HStack {
                                 
                                 // Aspect Button
-                                // todo: fazer o popup do aspect aparecer quando clicado
                                 Button(action: {}, label: {
                                     AspectButtonView(aspectName: aspectsList[aspect].aspectName)
                                 }).padding(.leading)
@@ -76,7 +75,7 @@ struct ContentView: View {
                     
                     // Rate System Segmented Control
                     Text("Select Your Score System:")
-                        .font(.system(size: 21.6, weight: .bold, design: .default))
+                        .font(.header5)
                         .foregroundStyle(.white)
                         .padding()
     

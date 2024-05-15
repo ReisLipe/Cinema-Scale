@@ -15,8 +15,8 @@ struct CalculateButtonView: View {
                 .frame(width: 264, height: 64)
                 .cornerRadius(15)
             Text("Calculate!")
-                .font(.system(size: 21.6, weight: .bold, design: .rounded))
-                .foregroundStyle(.white)
+                .font(.header5)
+                .foregroundColor(.white)
         }.padding()
     }
 }
