@@ -43,7 +43,9 @@ struct RatePopUpView: View {
                         aspect.icon
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 20, height: 20)
+                            .foregroundColor(.white)
+                            .bold()
+                            .frame(width: 25, height: 25)
                     }
                     
                     TextField("\(aspect.rate)", value: $aspect.rate, format: .number)

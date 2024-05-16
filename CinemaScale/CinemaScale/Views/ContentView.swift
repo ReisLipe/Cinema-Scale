@@ -33,22 +33,22 @@ struct ContentView: View {
             icon: Image(systemName: "theatermasks")),
         Aspects(
             aspectName: "Dialogue",
-            icon: Image("ellipsis.message")),
+            icon: Image(systemName: "ellipsis.message")),
         Aspects(
             aspectName: "Cinematography",
-            icon: Image("photo.stack")),
+            icon: Image(systemName: "photo.stack")),
         Aspects(
             aspectName: "Editing",
-            icon: Image("scissors")),
+            icon: Image(systemName: "scissors")),
         Aspects(
             aspectName: "Soundtrack",
-            icon: Image("hifispeakers")),
+            icon: Image(systemName: "hifispeakers")),
         Aspects(
             aspectName: "Directing",
-            icon: Image("movieclapper")),
+            icon: Image(systemName: "movieclapper")),
         Aspects(
             aspectName: "It Factor",
-            icon: Image("medal"))
+            icon: Image(systemName: "medal"))
     ]
     
     
