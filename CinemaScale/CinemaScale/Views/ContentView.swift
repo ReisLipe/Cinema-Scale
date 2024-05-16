@@ -15,18 +15,40 @@ struct ContentView: View {
     @State var showRatePopup: Bool = false
     
     @State var selectedScoreSystem: ScoreSystems = .five
-    @State var tappedAspect: Aspects = Aspects(aspectName: "NoAspect")
+    @State var tappedAspect: Aspects = Aspects(
+        aspectName: "NoAspect",
+        icon: Image(systemName: "xmark"))
     @State var aspectsList: [Aspects] = [
-        Aspects(aspectName: "Plot"),
-        Aspects(aspectName: "Attraction"),
-        Aspects(aspectName: "Theme"),
-        Aspects(aspectName: "Acting"),
-        Aspects(aspectName: "Dialogue"),
-        Aspects(aspectName: "Cinematography"),
-        Aspects(aspectName: "Editing"),
-        Aspects(aspectName: "Soundtrack"),
-        Aspects(aspectName: "Directing"),
-        Aspects(aspectName: "It Factor")
+        Aspects(
+            aspectName: "Plot",
+            icon: Image(systemName: "book")),
+        Aspects(
+            aspectName: "Attraction",
+            icon: Image(systemName: "popcorn")),
+        Aspects(
+            aspectName: "Theme",
+            icon: Image(systemName: "heart.circle")),
+        Aspects(
+            aspectName: "Acting",
+            icon: Image(systemName: "theatermasks")),
+        Aspects(
+            aspectName: "Dialogue",
+            icon: Image("ellipsis.message")),
+        Aspects(
+            aspectName: "Cinematography",
+            icon: Image("photo.stack")),
+        Aspects(
+            aspectName: "Editing",
+            icon: Image("scissors")),
+        Aspects(
+            aspectName: "Soundtrack",
+            icon: Image("hifispeakers")),
+        Aspects(
+            aspectName: "Directing",
+            icon: Image("movieclapper")),
+        Aspects(
+            aspectName: "It Factor",
+            icon: Image("medal"))
     ]
     
     
@@ -96,7 +118,6 @@ struct ContentView: View {
                         }
                         .pickerStyle(.segmented)
                         .background(.letterboxdGreen)
-                        .colorMultiply(.letterboxdOrange)
                         .cornerRadius(8)
                         .padding()
                     }
@@ -124,6 +145,7 @@ struct ContentView: View {
                     aspectsList: $aspectsList)
             }
         }
+        .animation(.easeIn.speed(0.9), value: showRatePopup)
         
         // Result popup
         .overlay(alignment: .bottom){
@@ -133,7 +155,9 @@ struct ContentView: View {
                     aspectsList: $aspectsList,
                     result: $totalScore)
             }
-        }.ignoresSafeArea(edges: .bottom)
+        }
+        .animation(.easeIn.speed(0.9), value: showResultPopup)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 

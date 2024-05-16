@@ -40,7 +40,10 @@ struct RatePopUpView: View {
                             .font(.header5)
                             .foregroundStyle(.white)
                         
-                        // TODO: App icon here
+                        aspect.icon
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
                     }
                     
                     TextField("\(aspect.rate)", value: $aspect.rate, format: .number)
@@ -77,9 +80,7 @@ struct RatePopUpView: View {
 
     // Function to close the pop up window
     func close() {
-        withAnimation(.spring()){
-            isActive = false
-        }
+        isActive = false
     }
     
     // Function to update the list by inserting the aspect with a new value
