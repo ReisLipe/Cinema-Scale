@@ -8,36 +8,32 @@
 import SwiftUI
 
 struct RateButtonView: View {
-    let rating: Int
+    @Binding var rating: Int
     
     var body: some View {
         ZStack{
             Rectangle()
-                .foregroundStyle(Color(red: 68 / 255, green: 84 / 255, blue: 102 / 255))
+                .foregroundStyle(.aspect)
                 .frame(width: 88, height: 64)
                 .cornerRadius(15)
             HStack{
                 if rating != 0 {
                     Text(String(rating))
-                        .font(.system(size: 21.6, weight: .bold, design: .rounded))
+                        .font(.header6)
                         .foregroundStyle(.white)
                     Image(systemName: "star.fill")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 21.6, height: 21.6)
-                        .foregroundColor(Color(red: 255 / 255, green: 204 / 255, blue: 0 / 255))
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.starYellow)
                 } else {
                     Image(systemName: "star")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 21.6, height: 21.6)
-                        .foregroundColor(Color(red: 255 / 255, green: 204 / 255, blue: 0 / 255))
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.starYellow)
                 }
             }
         }
     }
-}
-
-#Preview {
-    RateButtonView(rating: 2)
 }

@@ -28,7 +28,7 @@ struct ResultPopUpView: View {
                     // reset button
                     Button(action: {
                         aspectsList = aspectsList.map { aspect in
-                            Aspects(aspectName: aspect.aspectName)
+                            Aspects(aspectName: aspect.name)
                         }
                     }, label: {
                         ResultButtonView(

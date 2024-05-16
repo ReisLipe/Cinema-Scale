@@ -8,10 +8,10 @@
 import Foundation
 
 struct Aspects {
-    let aspectName: String
-    var aspectRate: Int = 0
+    let name: String
+    var rate: Int = 0
     
     init(aspectName: String) {
-        self.aspectName = aspectName
+        self.name = aspectName
     }
 }
