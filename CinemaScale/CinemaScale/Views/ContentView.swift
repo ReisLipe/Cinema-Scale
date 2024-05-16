@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var result: Float = 0
-    @State var resultCalculated: Bool = false
-    @State var allRated: Bool = false
-    @State var selectedScoreSystem: ScoreSystems = .five
-    @State var reset: Bool = false
-    @State var closeResult: Bool = false
+    @State var totalScore: Float = 0
+    
+    // @State var allAspectsRated: Bool = false
+    @State var showResultPopup: Bool = false
     @State var showRatePopup: Bool = false
+    
+    @State var selectedScoreSystem: ScoreSystems = .five
     @State var tappedAspect: Aspects = Aspects(aspectName: "NoAspect")
-    @State var tappedAspectPosition: Int = -1
     @State var aspectsList: [Aspects] = [
         Aspects(aspectName: "Plot"),
         Aspects(aspectName: "Attraction"),
@@ -72,7 +71,6 @@ struct ContentView: View {
                                 Button(
                                     action: {
                                         tappedAspect = aspectsList[aspect]
-                                        tappedAspectPosition = aspect
                                         showRatePopup = true
     
                                     },
@@ -94,7 +92,6 @@ struct ContentView: View {
                             ForEach(ScoreSystems.allCases, id: \.self) { scoreSystem in
                                 Text(scoreSystem.rawValue)
                                     .tag(scoreSystem)
-                                // todo: need to change text color
                             }
                         }
                         .pickerStyle(.segmented)
@@ -107,16 +104,17 @@ struct ContentView: View {
                     // Calculate Button:
                     Button(action: {
                         for aspect in aspectsList {
-                            result += Float(aspect.rate)
+                            totalScore += Float(aspect.rate)
                         }
-                        result = (result * selectedScoreSystem.scoreSystemMultiplier()) / 100 //10
-                        resultCalculated = true
+                        totalScore = (totalScore * selectedScoreSystem.scoreSystemMultiplier()) / 100
+                        showResultPopup = true
                     }, label: {
                         CalculateButtonView()
                     })
                 }
             }
         }
+        
         // Rate popup
         .overlay(alignment: .center){
             if showRatePopup {
@@ -126,13 +124,14 @@ struct ContentView: View {
                     aspectsList: $aspectsList)
             }
         }
+        
         // Result popup
         .overlay(alignment: .bottom){
-            if resultCalculated && !reset && !closeResult {
+            if showResultPopup {
                 ResultPopUpView(
+                    isActive: $showResultPopup,
                     aspectsList: $aspectsList,
-                    close: $closeResult,
-                    result: result)
+                    result: $totalScore)
             }
         }.ignoresSafeArea(edges: .bottom)
     }

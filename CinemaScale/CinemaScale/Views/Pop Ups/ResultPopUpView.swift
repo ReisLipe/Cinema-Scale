@@ -8,40 +8,57 @@
 import SwiftUI
 
 struct ResultPopUpView: View {
+    @Binding var isActive: Bool
     @Binding var aspectsList: [Aspects]
-    @Binding var close: Bool
-    let result: Float
+    @Binding var result: Float
     
     var body: some View {
         let formatedResult: String = String(format: "%.1f", result)
         
         ZStack {
+            // Popup background
             Color(.backGround)
+            
+            // Popup body
             VStack{
+                
+                // Popup title and total score
                 Text("Total Score: \(formatedResult)")
                     .font(.header3)
                     .foregroundStyle(.white)
                     .padding()
-                // todo: need to move this text to the top of rectangle
+                
                 Spacer()
+                
+                // Popup buttons
                 HStack{
-                    // reset button
-                    Button(action: {
-                        aspectsList = aspectsList.map { aspect in
-                            Aspects(aspectName: aspect.name)
-                        }
-                    }, label: {
-                        ResultButtonView(
-                        title: "Reset",
-                        color: Color.letterboxdOrange)
+                    
+                    // Reset button
+                    Button(
+                        action: {
+                            aspectsList = aspectsList.map{ aspect in
+                                Aspects(aspectName: aspect.name)}
+                            result = 0
+                            isActive = false
+                        },
+                        label: {
+                            ResultButtonView(
+                                    title: "Reset",
+                                    color: Color.letterboxdOrange)
                     })
-                    Button(action: {close = true}, label: {
-                        ResultButtonView(
-                            title: "Close",
-                            color: Color.letterboxdGreen)
-                    })
+                    
+                    // Close button
+                    Button(
+                        action: {
+                            isActive = false
+                        },
+                        label: {
+                            ResultButtonView(
+                                title: "Close",
+                                color: Color.letterboxdGreen)
+                        })
                 }.padding(.bottom, 64)
             }
-        }.frame(width: 393, height: 228)
+        }.frame(width: .infinity, height: 228)
     }
 }

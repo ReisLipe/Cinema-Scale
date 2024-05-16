@@ -1,8 +1,8 @@
 # Cinema Scale - Todo List
 
-1. Fix calculate button
-2. Create the text for the pop ups
-3. Improve the header spacing
-4. Make a better header icon
-5. Make a better app icon
-6. Make a 5 star button
+* Fix calculate button
+* Create the text for the pop ups
+* Improve the header spacing
+* Make a better header icon
+* Make a better app icon
+* Make a 5 star button
