@@ -10,6 +10,10 @@
 		BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */; };
 		BF9B04682BF50335002EA346 /* Todos.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF9B04672BF50335002EA346 /* Todos.txt */; };
 		BF9B046A2BF509F7002EA346 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B04692BF509F7002EA346 /* StyleGuide.swift */; };
+		BF9B046C2BF6C108002EA346 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B046B2BF6C108002EA346 /* HeaderView.swift */; };
+		BF9B046E2BF6C1EB002EA346 /* AspectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B046D2BF6C1EB002EA346 /* AspectListView.swift */; };
+		BF9B04702BF6C237002EA346 /* ScoreSystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B046F2BF6C237002EA346 /* ScoreSystemView.swift */; };
+		BF9B04722BF6C270002EA346 /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B04712BF6C270002EA346 /* CalculateView.swift */; };
 		BFD325542BEF2016005A5645 /* CinemaScaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */; };
 		BFD325562BEF2016005A5645 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD325552BEF2016005A5645 /* ContentView.swift */; };
 		BFD325582BEF2019005A5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD325572BEF2019005A5645 /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 		BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultButtonsView.swift; sourceTree = "<group>"; };
 		BF9B04672BF50335002EA346 /* Todos.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Todos.txt; sourceTree = "<group>"; };
 		BF9B04692BF509F7002EA346 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		BF9B046B2BF6C108002EA346 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		BF9B046D2BF6C1EB002EA346 /* AspectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectListView.swift; sourceTree = "<group>"; };
+		BF9B046F2BF6C237002EA346 /* ScoreSystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSystemView.swift; sourceTree = "<group>"; };
+		BF9B04712BF6C270002EA346 /* CalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateView.swift; sourceTree = "<group>"; };
 		BFD325502BEF2016005A5645 /* CinemaScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaScaleApp.swift; sourceTree = "<group>"; };
 		BFD325552BEF2016005A5645 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +63,7 @@
 		BF0DD69A2BF50048003BC4A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BFD325552BEF2016005A5645 /* ContentView.swift */,
+				BF9B04742BF6C5CB002EA346 /* MainView */,
 				BFD325712BF05C9E005A5645 /* Pop Ups */,
 				BFD325622BEF2037005A5645 /* ButtonView */,
 			);
@@ -69,6 +77,18 @@
 				BFD325692BEFC9E4005A5645 /* ScoreSystems.swift */,
 			);
 			path = Auxiliaries;
+			sourceTree = "<group>";
+		};
+		BF9B04742BF6C5CB002EA346 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				BFD325552BEF2016005A5645 /* ContentView.swift */,
+				BF9B046B2BF6C108002EA346 /* HeaderView.swift */,
+				BF9B046F2BF6C237002EA346 /* ScoreSystemView.swift */,
+				BF9B046D2BF6C1EB002EA346 /* AspectListView.swift */,
+				BF9B04712BF6C270002EA346 /* CalculateView.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		BFD325472BEF2016005A5645 = {
@@ -91,12 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				BFD325532BEF2016005A5645 /* CinemaScaleApp.swift */,
+				BF9B04692BF509F7002EA346 /* StyleGuide.swift */,
 				BF0DD69B2BF50074003BC4A6 /* Auxiliaries */,
 				BF0DD69A2BF50048003BC4A6 /* Views */,
 				BFD325572BEF2019005A5645 /* Assets.xcassets */,
 				BFD325592BEF2019005A5645 /* Preview Content */,
 				BF9B04672BF50335002EA346 /* Todos.txt */,
-				BF9B04692BF509F7002EA346 /* StyleGuide.swift */,
 			);
 			path = CinemaScale;
 			sourceTree = "<group>";
@@ -201,12 +221,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD325682BEF20E4005A5645 /* Aspects.swift in Sources */,
+				BF9B04722BF6C270002EA346 /* CalculateView.swift in Sources */,
 				BFD3256A2BEFC9E4005A5645 /* ScoreSystems.swift in Sources */,
 				BF9B046A2BF509F7002EA346 /* StyleGuide.swift in Sources */,
 				BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */,
 				BFD325732BF05CBD005A5645 /* RatePopUp.swift in Sources */,
 				BFD3256C2BEFCF4A005A5645 /* CalculateButtonView.swift in Sources */,
+				BF9B04702BF6C237002EA346 /* ScoreSystemView.swift in Sources */,
 				BFD325662BEF20A6005A5645 /* RateButtonView.swift in Sources */,
+				BF9B046C2BF6C108002EA346 /* HeaderView.swift in Sources */,
+				BF9B046E2BF6C1EB002EA346 /* AspectListView.swift in Sources */,
 				BFD325642BEF2060005A5645 /* AspectButtonView.swift in Sources */,
 				BFD325562BEF2016005A5645 /* ContentView.swift in Sources */,
 				BFD325702BEFE8FB005A5645 /* ResultPopUpView.swift in Sources */,
