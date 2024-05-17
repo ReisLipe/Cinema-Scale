@@ -21,7 +21,7 @@ struct CalculateView: View {
             for aspect in aspectsList {
                 totalScore += Float(aspect.rate)
             }
-            totalScore = (totalScore * selectedScoreSystem.scoreSystemMultiplier()) / 100
+            totalScore = (totalScore * selectedScoreSystem.scoreSystemMultiplier()) / 10
             showResultPopup = true
         }, label: {
             CalculateButtonView()
