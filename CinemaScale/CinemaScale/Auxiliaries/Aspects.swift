@@ -10,7 +10,7 @@ import SwiftUI
 struct Aspects {
     let name: String
     let icon: Image
-    var rate: Int = 0
+    var rate: Float = 0
     
     init(aspectName: String, icon: Image) {
         self.name = aspectName

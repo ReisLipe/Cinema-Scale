@@ -11,11 +11,11 @@ struct RatePopUpView: View {
     @Binding var isActive: Bool
     @Binding var aspect: Aspects
     @Binding var aspectsList: [Aspects]
-    // let icon: Image
-    // Implement later
-    
     
     var body: some View {
+        // Formated rate
+        let formatedRate: String = String(format: "%.1f", aspect.rate)
+        
         ZStack {
             
             // Popup backgorund
@@ -48,13 +48,23 @@ struct RatePopUpView: View {
                             .frame(width: 25, height: 25)
                     }
                     
-                    TextField("\(aspect.rate)", value: $aspect.rate, format: .number)
-                        .frame(width: 80, height: 44)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.starYellow)
-                        .background(.aspect)
-                        .cornerRadius(20)
-                        .font(.header6)
+                    // SLIDER
+                    Slider(
+                        value: $aspect.rate,
+                        in: 0...5,
+                        step: 0.5
+                    )
+                    .padding(.horizontal, 20)
+                    .tint(.starYellow)
+                    
+                    HStack{
+                        Text("Rate:")
+                            .font(.header6)
+                            .foregroundStyle(aspect.rate > 0 ? .white : .backGround)
+                        Text("\(formatedRate)")
+                            .font(.header6)
+                            .foregroundStyle(aspect.rate > 0 ? .starYellow : .backGround)
+                    }
                 }
             }
             .frame(width: 344, height: 160)
@@ -95,4 +105,8 @@ struct RatePopUpView: View {
             }
         })
     }
+}
+
+#Preview {
+    RatePopUpView(isActive: .constant(true), aspect: .constant(Aspects(aspectName: "Aspect", icon: Image(systemName: "popcorn"))), aspectsList: .constant([]))
 }

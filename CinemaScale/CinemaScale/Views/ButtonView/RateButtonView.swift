@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RateButtonView: View {
-    @Binding var rating: Int
+    @Binding var aspect: Aspects
     
     var body: some View {
         ZStack{
@@ -17,8 +17,8 @@ struct RateButtonView: View {
                 .frame(width: 88, height: 64)
                 .cornerRadius(15)
             HStack{
-                if rating != 0 {
-                    Text(String(rating))
+                if aspect.rate != 0 {
+                    Text(String(aspect.rate))
                         .font(.header6)
                         .foregroundStyle(.white)
                     Image(systemName: "star.fill")

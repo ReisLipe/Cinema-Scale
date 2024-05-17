@@ -31,7 +31,7 @@ struct AspectListView: View {
                             showRatePopup = true
                         },
                         label: {
-                        RateButtonView(rating: $aspectsList[aspect].rate)
+                        RateButtonView(aspect: $aspectsList[aspect])
                     }).padding(.trailing)
                 }
             }
