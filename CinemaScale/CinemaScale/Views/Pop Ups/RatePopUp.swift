@@ -50,7 +50,7 @@ struct RatePopUpView: View {
                     
                     // SLIDER
                     Slider(
-                        value: $aspect.rate,
+                        value: $aspect.rate.animation(),
                         in: 0...5,
                         step: 0.5
                     )
@@ -64,6 +64,7 @@ struct RatePopUpView: View {
                         Text("\(formatedRate)")
                             .font(.header6)
                             .foregroundStyle(aspect.rate > 0 ? .starYellow : .backGround)
+                            .contentTransition(.numericText())
                     }
                 }
             }
