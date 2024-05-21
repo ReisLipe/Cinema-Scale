@@ -42,7 +42,7 @@ struct ContentView: View {
             icon: Image(systemName: "scissors")),
         Aspects(
             aspectName: "Soundtrack",
-            icon: Image(systemName: "hifispeakers")),
+            icon: Image(systemName: "hifispeaker.2")),
         Aspects(
             aspectName: "Directing",
             icon: Image(systemName: "movieclapper")),
