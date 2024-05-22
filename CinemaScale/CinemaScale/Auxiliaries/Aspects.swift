@@ -10,10 +10,14 @@ import SwiftUI
 struct Aspects {
     let name: String
     let icon: Image
+    let subtitle: String
+    let text: String
     var rate: Float = 0
     
-    init(aspectName: String, icon: Image) {
+    init(aspectName: String, icon: Image, subtitle: String, text: String) {
         self.name = aspectName
         self.icon = icon
+        self.subtitle = subtitle
+        self.text = text
     }
 }

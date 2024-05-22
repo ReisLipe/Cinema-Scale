@@ -37,7 +37,11 @@ struct ResultPopUpView: View {
                     Button(
                         action: {
                             aspectsList = aspectsList.map{ aspect in
-                                Aspects(aspectName: aspect.name, icon: aspect.icon)
+                                Aspects(
+                                    aspectName: aspect.name,
+                                    icon: aspect.icon,
+                                    subtitle: aspect.subtitle,
+                                    text: aspect.text)
                             }
                             result = 0
                             isActive = false

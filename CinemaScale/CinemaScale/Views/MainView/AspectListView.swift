@@ -13,6 +13,7 @@ struct AspectListView: View {
     @Binding var aspectsList: [Aspects]
     @Binding var tappedAspect: Aspects
     @Binding var showRatePopup: Bool
+    @Binding var showAspectPopup: Bool
     
     var body: some View {
         VStack{
@@ -20,7 +21,12 @@ struct AspectListView: View {
                 HStack {
                     
                     // Aspect Button
-                    Button(action: {}, label: {
+                    Button(
+                        action: {
+                            tappedAspect = aspectsList[aspect]
+                            showAspectPopup = true
+                        },
+                        label: {
                         AspectButtonView(aspectName: aspectsList[aspect].name)
                     }).padding(.leading)
                     

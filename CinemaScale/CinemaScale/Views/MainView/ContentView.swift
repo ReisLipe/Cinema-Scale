@@ -12,44 +12,9 @@ struct ContentView: View {
     // @State var allAspectsRated: Bool = false
     @State var showResultPopup: Bool = false
     @State var showRatePopup: Bool = false
+    @State var showAspectPopup: Bool = false
     @State var selectedScoreSystem: ScoreSystems = .five
-    @State var tappedAspect: Aspects = Aspects(
-        aspectName: "NoAspect",
-        icon: Image(systemName: "xmark"))
-    
-    
-    @State var aspectsList: [Aspects] = [
-        Aspects(
-            aspectName: "Plot",
-            icon: Image(systemName: "book")),
-        Aspects(
-            aspectName: "Attraction",
-            icon: Image(systemName: "popcorn")),
-        Aspects(
-            aspectName: "Theme",
-            icon: Image(systemName: "heart.circle")),
-        Aspects(
-            aspectName: "Acting",
-            icon: Image(systemName: "theatermasks")),
-        Aspects(
-            aspectName: "Dialogue",
-            icon: Image(systemName: "ellipsis.message")),
-        Aspects(
-            aspectName: "Cinematography",
-            icon: Image(systemName: "photo.stack")),
-        Aspects(
-            aspectName: "Editing",
-            icon: Image(systemName: "scissors")),
-        Aspects(
-            aspectName: "Soundtrack",
-            icon: Image(systemName: "hifispeaker.2")),
-        Aspects(
-            aspectName: "Directing",
-            icon: Image(systemName: "movieclapper")),
-        Aspects(
-            aspectName: "It Factor",
-            icon: Image(systemName: "medal"))
-    ]
+    @ObservedObject var aspectsList: AspectsList = .init()
     
     
     var body: some View {
@@ -66,9 +31,10 @@ struct ContentView: View {
                 ScrollView{
                     // ASPECT LIST
                     AspectListView(
-                        aspectsList: $aspectsList, 
-                        tappedAspect: $tappedAspect,
-                        showRatePopup: $showRatePopup)
+                        aspectsList: $aspectsList.aspectsList,
+                        tappedAspect: $aspectsList.tappedAspect,
+                        showRatePopup: $showRatePopup,
+                        showAspectPopup: $showAspectPopup)
                     
                     // SCORE SYSTEM
                     ScoreSystemView(selectedScoreSystem: $selectedScoreSystem)
@@ -76,10 +42,18 @@ struct ContentView: View {
                     // CALCULATE BUTTON
                     CalculateView(
                         totalScore: $totalScore,
-                        aspectsList: $aspectsList,
+                        aspectsList: $aspectsList.aspectsList,
                         showResultPopup: $showResultPopup,
                         selectedScoreSystem: selectedScoreSystem)
                 }
+            }
+        }
+        // Aspect popup
+        .overlay(alignment: .center){
+            if showAspectPopup {
+                AspectPopupView(
+                    aspect: $aspectsList.tappedAspect,
+                    showAspectPopup: $showAspectPopup)
             }
         }
         
@@ -88,8 +62,8 @@ struct ContentView: View {
             if showRatePopup {
                 RatePopUpView(
                     isActive: $showRatePopup,
-                    aspect: $tappedAspect,
-                    aspectsList: $aspectsList)
+                    aspect: $aspectsList.tappedAspect,
+                    aspectsList: $aspectsList.aspectsList)
             }
         }
         .animation(.easeIn.speed(0.9), value: showRatePopup)
@@ -99,7 +73,7 @@ struct ContentView: View {
             if showResultPopup {
                 ResultPopUpView(
                     isActive: $showResultPopup,
-                    aspectsList: $aspectsList,
+                    aspectsList: $aspectsList.aspectsList,
                     result: $totalScore)
             }
         }

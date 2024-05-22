@@ -1,7 +1,0 @@
-# Cinema Scale - Todo List
-
-* Create the text for the pop ups
-* Improve the header spacing
-* Make a better header icon
-* Make a better app icon
-* Make a 5 star button
