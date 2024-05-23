@@ -90,7 +90,7 @@ struct RatePopUpView: View {
                     }
                 }
             }
-        }
+        }.opacity(isActive ? 1 : 0)
     }
 
     // Function to close the pop up window
@@ -108,8 +108,4 @@ struct RatePopUpView: View {
             }
         })
     }
-}
-
-#Preview {
-    RatePopUpView(isActive: .constant(true), aspect: .constant(Aspects(aspectName: "Aspect", icon: Image(systemName: "popcorn"), subtitle: "This is a Subtitle", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor interdum sapien nec eleifend. Ut sed feugiat mauris. Donec eget tristique arcu. Integer tempus vel neque a porttitor. Integer maximus erat id mi faucibus aliquet. In sit amet scele")), aspectsList: .constant([]))
 }

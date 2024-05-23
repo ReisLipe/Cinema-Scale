@@ -10,17 +10,38 @@ import SwiftUI
 
 
 struct HeaderView: View {
+    @Binding var isActive: Bool
+    
     var body: some View {
-        HStack{
-            Text("Cinema Scale")
-                .font(.header1)
-                .foregroundStyle(.white)
-            
-            Image(systemName: "popcorn.fill")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 36, height: 36)
-                .foregroundColor(.red)
-        }
+        ZStack{
+            Button(action: {isActive = true}, label: {
+                HStack{
+                    Image(systemName: "popcorn.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 36, height: 36)
+                        .foregroundColor(.red)
+                    
+                    Text("Cinema Scale")
+                        .font(.header1)
+                        .foregroundStyle(.white)
+                    
+                    Image(systemName: "info.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 15, height: 15)
+                        .foregroundColor(.white)
+                }
+            })
+        }.padding(.bottom)
+    }
+}
+
+
+#Preview {
+    ZStack{
+        Color.backGround
+            .ignoresSafeArea(.all)
+        HeaderView(isActive: .constant(true))
     }
 }

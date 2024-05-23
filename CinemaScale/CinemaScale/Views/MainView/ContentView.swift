@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var showResultPopup: Bool = false
     @State var showRatePopup: Bool = false
     @State var showAspectPopup: Bool = false
+    @State var showInfoPopup: Bool = false
     @State var selectedScoreSystem: ScoreSystems = .five
     @ObservedObject var aspectsList: AspectsList = .init()
     
@@ -24,17 +25,20 @@ struct ContentView: View {
             Color(.backGround)
                 .ignoresSafeArea(.all)
             
-            VStack{
+            VStack(spacing: .zero){
                 // HEADER
-                HeaderView()
-                
+                ZStack(alignment: .bottom) {
+                    HeaderView(isActive: $showInfoPopup)
+                }
+                .padding(.bottom, 10)
                 ScrollView{
                     // ASPECT LIST
                     AspectListView(
                         aspectsList: $aspectsList.aspectsList,
                         tappedAspect: $aspectsList.tappedAspect,
                         showRatePopup: $showRatePopup,
-                        showAspectPopup: $showAspectPopup)
+                        showAspectPopup: $showAspectPopup
+                    )
                     
                     // SCORE SYSTEM
                     ScoreSystemView(selectedScoreSystem: $selectedScoreSystem)
@@ -44,27 +48,30 @@ struct ContentView: View {
                         totalScore: $totalScore,
                         aspectsList: $aspectsList.aspectsList,
                         showResultPopup: $showResultPopup,
-                        selectedScoreSystem: selectedScoreSystem)
+                        selectedScoreSystem: selectedScoreSystem
+                    )
                 }
             }
+            
+            
         }
         // Aspect popup
         .overlay(alignment: .center){
             if showAspectPopup {
                 AspectPopupView(
-                    aspect: $aspectsList.tappedAspect,
-                    showAspectPopup: $showAspectPopup)
+                    isActive: $showAspectPopup,
+                    aspect: $aspectsList.tappedAspect
+                )
             }
         }
         
         // Rate popup
         .overlay(alignment: .center){
-            if showRatePopup {
                 RatePopUpView(
                     isActive: $showRatePopup,
                     aspect: $aspectsList.tappedAspect,
-                    aspectsList: $aspectsList.aspectsList)
-            }
+                    aspectsList: $aspectsList.aspectsList
+                )
         }
         .animation(.easeIn.speed(0.9), value: showRatePopup)
         
@@ -74,11 +81,18 @@ struct ContentView: View {
                 ResultPopUpView(
                     isActive: $showResultPopup,
                     aspectsList: $aspectsList.aspectsList,
-                    result: $totalScore)
+                    result: $totalScore
+                )
             }
         }
         .animation(.easeIn.speed(0.9), value: showResultPopup)
         .ignoresSafeArea(edges: .bottom)
+        
+        // Info popup
+        .overlay(alignment: .center){
+            InfoPopupView(isActive: $showInfoPopup)
+        }
+        .animation(.easeIn.speed(0.9), value: showInfoPopup)
     }
 }
 

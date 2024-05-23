@@ -44,6 +44,14 @@ extension Font {
         weight: .bold,
         design: .rounded
     )
-    static let body1: Font = .body.bold()
+    static let subtitle: Font = .custom(
+        "Lora-Regular_Medium",
+        size: 15
+    )
+    static let body1: Font = .custom(
+        "Lora-Regular_Medium",
+        size: 10
+    )
+    
 }
 

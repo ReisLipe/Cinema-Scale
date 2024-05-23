@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct AspectPopupView: View {
+    @Binding var isActive: Bool
     @Binding var aspect: Aspects
-    @Binding var showAspectPopup: Bool
-    
+
     var body: some View {
         ZStack{
             
@@ -18,7 +18,10 @@ struct AspectPopupView: View {
             Color.backGround
                 .ignoresSafeArea(.all)
                 .opacity(0.8)
-            
+                .onTapGesture {
+                    close()
+                }
+
             // Popup body
             ZStack{
                 Color.backGround
@@ -38,22 +41,40 @@ struct AspectPopupView: View {
                             .foregroundColor(.red)
                             .bold()
                     }
+                    .padding(.top)
                     
                     // Subtitle
                     HStack{
                         Text(aspect.subtitle)
-                            .font(.header6)
-                            .foregroundColor(.white)
-                    }.padding()
-                    
-                    // Text
-                    HStack{
-                        Text(aspect.text)
-                            .font(.body1)
+                            .font(.subtitle)
+                            .bold()
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
-                    }.padding()
-                }
+                    }
+                    .padding(.horizontal)
+                    .padding(.bottom)
+                    
+                    // Text
+                    ScrollView {
+                        VStack{
+                            ForEach(Array(aspect.text.keys), id:\.self){ key in
+                                    // Sub aspect
+                                    Text("\(key):")
+                                        .font(.body1)
+                                        .bold()
+                                        .foregroundStyle(.white)
+                                        .multilineTextAlignment(.leading)
+                                        .padding()
+                                    
+                                    // Explanation
+                                    Text(aspect.text[key] ?? "")
+                                        .font(.body1)
+                                        .foregroundColor(.white)
+                                        .multilineTextAlignment(.leading)
+                            }
+                        }
+                    }
+                }.padding()
             }
             .frame(width: 344, height: 374)
             .cornerRadius(20)
@@ -72,10 +93,11 @@ struct AspectPopupView: View {
                     }
                 }
             }
-        }
+        }.opacity(isActive ? 1 : 0)
     }
     
+    // Function to close the pop up window
     func close() {
-        showAspectPopup = false
+        isActive = false
     }
 }

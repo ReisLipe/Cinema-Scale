@@ -64,6 +64,8 @@ struct ResultPopUpView: View {
                         })
                 }.padding(.bottom, 64)
             }
-        }.frame(width: .infinity, height: 228)
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 228)
     }
 }
