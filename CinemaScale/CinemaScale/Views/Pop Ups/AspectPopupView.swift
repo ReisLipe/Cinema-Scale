@@ -26,7 +26,7 @@ struct AspectPopupView: View {
             ZStack{
                 Color.backGround
                 
-                VStack{
+                VStack(spacing: 8){
                     
                     // Title
                     HStack{
@@ -40,8 +40,7 @@ struct AspectPopupView: View {
                             .frame(width: 25, height: 25)
                             .foregroundColor(.red)
                             .bold()
-                    }
-                    .padding(.top)
+                    }.padding()
                     
                     // Subtitle
                     HStack{
@@ -51,12 +50,10 @@ struct AspectPopupView: View {
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
                     }
-                    .padding(.horizontal)
-                    .padding(.bottom)
                     
                     // Text
                     ScrollView {
-                        VStack{
+                        VStack(spacing: 8){
                             ForEach(Array(aspect.text.keys), id:\.self){ key in
                                     // Sub aspect
                                     Text("\(key):")
@@ -64,7 +61,6 @@ struct AspectPopupView: View {
                                         .bold()
                                         .foregroundStyle(.white)
                                         .multilineTextAlignment(.leading)
-                                        .padding()
                                     
                                     // Explanation
                                     Text(aspect.text[key] ?? "")
@@ -72,7 +68,7 @@ struct AspectPopupView: View {
                                         .foregroundColor(.white)
                                         .multilineTextAlignment(.leading)
                             }
-                        }
+                        }.padding()
                     }
                 }.padding()
             }
@@ -100,4 +96,24 @@ struct AspectPopupView: View {
     func close() {
         isActive = false
     }
+}
+
+
+#Preview {
+    struct AspectPopupPreviewContainer: View {
+        @State private var isActive: Bool = true
+        @State private var aspect: Aspects = .init(
+            aspectName: "Aspect",
+            icon: Image(systemName: "popcorn.fill"),
+            subtitle: "This is a subtitle",
+            text: [
+                "Topic 1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id turpis massa. Maecenas non turpis vulputate, egestas eros ut, ultrices ex. Integer eu sapien eget lorem viverra iaculis. Phasellus risus diam, pulvinar ut felis eget, feugiat iaculis ante. Ut urna libero, tempor ac purus finibus, vulputate bibendum ex. Curabitur tincidunt ex quis congue commodo. Praesent et pellentesque velit, at maximus massa. Aenean sodales massa vestibulum eleifend rutrum. Ut fermentum sollicitudin ante ut sodales. Cras sit amet ipsum porta, congue mi vel, ornare elit. Maecenas velit risus, pellentesque convallis tortor ac, hendrerit faucibus leo. Nullam et magna ex. Praesent justo arcu, laoreet vitae nisl ut, tempor tristique mauris.",
+                "Topic 2": "Donec fringilla, orci at mollis consequat, ex turpis semper risus, ac volutpat risus dolor in augue. Aliquam efficitur odio orci, quis accumsan turpis molestie sit amet. Etiam mattis, elit id maximus sollicitudin, risus nisi consequat nunc, eu faucibus libero lorem vitae libero. Cras viverra lobortis mi, in blandit mi egestas rhoncus. Morbi malesuada vitae nulla et facilisis. Duis pellentesque in sapien nec blandit. Sed quis pharetra risus, aliquam venenatis ipsum. Praesent consequat ultricies risus, vitae hendrerit leo pulvinar vitae. In tempus justo leo, eget dapibus arcu porttitor ac. In et aliquam est."])
+        
+        var body: some View {
+            AspectPopupView(isActive: self.$isActive, aspect: self.$aspect)
+        }
+    }
+    
+    return AspectPopupPreviewContainer()
 }

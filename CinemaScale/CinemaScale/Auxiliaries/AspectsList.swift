@@ -82,7 +82,7 @@ class AspectsList: ObservableObject {
                 "Execution": "What does it mean to execute a movie to its fullest potential? First, there should be zero flaws. Not a single weak line of dialogue. Not one loose end in the plotline.\n\nFrom beginning to end, our disbelief has been suspended. All ten elements were carefully executed to perfection. Classics like Steven Spielberg’s Schindler’s List represents the total and complete vision of the story and should never be remade. A film has been executed to its fullest potential when the story was so flawlessly crafted that there is simply no better way it could be told.\n\nThe last element on the list is by far the most subjective on the Cinema Scale, but serves an important role that helps us distinguish between great films, and ones that are truly magical."]),
         Aspects(
             aspectName: "It Factor",
-            icon: Image(systemName: "medal"),
+            icon: Image(systemName: "medal.fill"),
             subtitle: "The movie is unique and transcendent.",
             text: [
                 "One-of-a-kind": "A movie is one-of-a-kind when it is original, innovative and pioneering. There’s no other movie like it.\n\nMaybe the story was completely original like The Lion King. Maybe there were groundbreaking visual effects like Avatar. Or maybe there’s more than one element that makes the film unique.\n\nWhatever it is, something about the movie elevates it to its very own rarified ground, and earns a special place in our hearts.",

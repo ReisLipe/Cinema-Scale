@@ -10,6 +10,7 @@
 		BF06C36D2BFD0B4C00750A81 /* AspectPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06C36C2BFD0B4C00750A81 /* AspectPopupView.swift */; };
 		BF06C3752BFD28E900750A81 /* AspectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06C3742BFD28E900750A81 /* AspectsList.swift */; };
 		BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */; };
+		BF47C80B2C0A7C2400F8AA21 /* ItFactorPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47C80A2C0A7C2400F8AA21 /* ItFactorPopUp.swift */; };
 		BF5B01C92BFE46AA00EE53FA /* Lora-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5B01C82BFE46AA00EE53FA /* Lora-VariableFont_wght.ttf */; };
 		BF5B01CC2BFE6FC700EE53FA /* InfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B01CB2BFE6FC700EE53FA /* InfoPopupView.swift */; };
 		BF9B046A2BF509F7002EA346 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B04692BF509F7002EA346 /* StyleGuide.swift */; };
@@ -34,6 +35,7 @@
 		BF06C36C2BFD0B4C00750A81 /* AspectPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectPopupView.swift; sourceTree = "<group>"; };
 		BF06C3742BFD28E900750A81 /* AspectsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectsList.swift; sourceTree = "<group>"; };
 		BF0DD6962BF3F269003BC4A6 /* ResultButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultButtonsView.swift; sourceTree = "<group>"; };
+		BF47C80A2C0A7C2400F8AA21 /* ItFactorPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItFactorPopUp.swift; sourceTree = "<group>"; };
 		BF5B01C82BFE46AA00EE53FA /* Lora-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		BF5B01CA2BFE474800EE53FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BF5B01CB2BFE6FC700EE53FA /* InfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPopupView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				BFD325722BF05CBD005A5645 /* RatePopUp.swift */,
 				BF06C36C2BFD0B4C00750A81 /* AspectPopupView.swift */,
 				BF5B01CB2BFE6FC700EE53FA /* InfoPopupView.swift */,
+				BF47C80A2C0A7C2400F8AA21 /* ItFactorPopUp.swift */,
 			);
 			path = "Pop Ups";
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				BF0DD6972BF3F269003BC4A6 /* ResultButtonsView.swift in Sources */,
 				BFD325732BF05CBD005A5645 /* RatePopUp.swift in Sources */,
 				BF06C36D2BFD0B4C00750A81 /* AspectPopupView.swift in Sources */,
+				BF47C80B2C0A7C2400F8AA21 /* ItFactorPopUp.swift in Sources */,
 				BFD3256C2BEFCF4A005A5645 /* CalculateButtonView.swift in Sources */,
 				BF9B04702BF6C237002EA346 /* ScoreSystemView.swift in Sources */,
 				BFD325662BEF20A6005A5645 /* RateButtonView.swift in Sources */,

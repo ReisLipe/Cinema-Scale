@@ -14,6 +14,7 @@ struct ContentView: View {
     @State var showRatePopup: Bool = false
     @State var showAspectPopup: Bool = false
     @State var showInfoPopup: Bool = false
+    @State var itFacotr: Bool? = nil
     @State var selectedScoreSystem: ScoreSystems = .five
     @ObservedObject var aspectsList: AspectsList = .init()
     
@@ -52,9 +53,8 @@ struct ContentView: View {
                     )
                 }
             }
-            
-            
         }
+        
         // Aspect popup
         .overlay(alignment: .center){
             if showAspectPopup {
