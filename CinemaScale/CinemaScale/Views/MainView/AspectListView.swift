@@ -14,6 +14,7 @@ struct AspectListView: View {
     @Binding var tappedAspect: Aspects
     @Binding var showRatePopup: Bool
     @Binding var showAspectPopup: Bool
+    @Binding var showItFactorPopup: Bool
     
     var body: some View {
         VStack{
@@ -34,7 +35,11 @@ struct AspectListView: View {
                     Button(
                         action: {
                             tappedAspect = aspectsList[aspect]
-                            showRatePopup = true
+                            if tappedAspect.name == "It Factor" {
+                                showItFactorPopup = true
+                            } else {
+                                showRatePopup = true
+                            }
                         },
                         label: {
                         RateButtonView(aspect: $aspectsList[aspect])

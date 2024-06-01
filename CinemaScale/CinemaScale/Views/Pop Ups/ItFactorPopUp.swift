@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ItFactorPopUp: View {
+    @Binding var itFactor: Aspects
+    @Binding var aspectsList: [Aspects]
     @Binding var isActive: Bool
-    @Binding var itFactor: Bool?
     
     var body: some View {
         ZStack {
@@ -28,11 +29,11 @@ struct ItFactorPopUp: View {
                 
                 VStack(spacing: 32){
                     HStack{
-                        Text("It Factor")
+                        Text(itFactor.name)
                             .font(.header5)
                             .foregroundStyle(.white)
                         
-                        Image(systemName: "medal.fill")
+                        itFactor.icon
                             .resizable()
                             .scaledToFit()
                             .frame(width: 25, height: 25)
@@ -41,7 +42,12 @@ struct ItFactorPopUp: View {
                     
                     HStack(spacing: 16){
                         // Button Has
-                        Button(action: {self.itFactor = true}, label: {
+                        Button(
+                            action: {
+                                itFactor.rate = 5
+                                close()
+                            },
+                            label: {
                             ZStack{
                                 Color.letterboxdGreen
                                 Text("Has It")
@@ -54,7 +60,12 @@ struct ItFactorPopUp: View {
                         })
                         
                         // Button Hasn`t
-                        Button(action: {self.itFactor = false}, label: {
+                        Button(
+                            action: {
+                                itFactor.rate = 0
+                                close()
+                            },
+                            label: {
                             ZStack{
                                 Color.letterboxdOrange
                                 Text("Doesn't Have It")
@@ -71,25 +82,24 @@ struct ItFactorPopUp: View {
             .frame(width: 344, height: 180)
             .cornerRadius(20)
         }
+        .opacity(isActive ? 1 : 0)
     }
     
+    // Function to close the pop up window
     func close() {
-        self.isActive = false
+        isActive = false
+        updateAspectsList()
+    }
+    
+    // Function to update the list by inserting the aspect with a new value
+    func updateAspectsList(){
+        aspectsList = aspectsList.map({
+            if $0.name == itFactor.name{
+                itFactor
+            } else {
+                $0
+            }
+        })
     }
 }
 
-#Preview {
-    struct ItFactorPopUpPreviewContainer: View {
-        @State private var isActive: Bool = true
-        @State private var itFactor: Bool? = nil
-        
-        var body: some View {
-            ItFactorPopUp(
-                isActive: self.$isActive,
-                itFactor: self.$itFactor
-            )
-        }
-    }
-    
-    return ItFactorPopUpPreviewContainer()
-}

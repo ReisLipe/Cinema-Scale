@@ -14,7 +14,8 @@ struct ContentView: View {
     @State var showRatePopup: Bool = false
     @State var showAspectPopup: Bool = false
     @State var showInfoPopup: Bool = false
-    @State var itFacotr: Bool? = nil
+    @State var showItFactorPopup: Bool = false
+    @State var itFactor: Bool? = nil
     @State var selectedScoreSystem: ScoreSystems = .five
     @ObservedObject var aspectsList: AspectsList = .init()
     
@@ -38,7 +39,8 @@ struct ContentView: View {
                         aspectsList: $aspectsList.aspectsList,
                         tappedAspect: $aspectsList.tappedAspect,
                         showRatePopup: $showRatePopup,
-                        showAspectPopup: $showAspectPopup
+                        showAspectPopup: $showAspectPopup,
+                        showItFactorPopup: $showItFactorPopup
                     )
                     
                     // SCORE SYSTEM
@@ -67,13 +69,22 @@ struct ContentView: View {
         
         // Rate popup
         .overlay(alignment: .center){
-                RatePopUpView(
-                    isActive: $showRatePopup,
-                    aspect: $aspectsList.tappedAspect,
-                    aspectsList: $aspectsList.aspectsList
-                )
+            RatePopUpView(
+                isActive: $showRatePopup,
+                aspect: $aspectsList.tappedAspect,
+                aspectsList: $aspectsList.aspectsList
+            )
         }
         .animation(.easeIn.speed(0.9), value: showRatePopup)
+        
+        // It Factor popup
+        .overlay(alignment: .center){
+            ItFactorPopUp(
+                itFactor: $aspectsList.tappedAspect,
+                aspectsList: $aspectsList.aspectsList,
+                isActive: $showItFactorPopup
+            )
+        }
         
         // Result popup
         .overlay(alignment: .bottom){
